@@ -10,9 +10,9 @@ A web app that connects potential pet adopters with adoption shelters.
 
 Members:
 
-Adrienne Young
-Anubhav Sudhakar
-David Rafanan
+Adrienne Young,
+Anubhav Sudhakar,
+David Rafanan,
 Ivy Cheung
 
 4.3.16 Updates:
