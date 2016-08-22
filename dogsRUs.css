@@ -1,0 +1,70 @@
+/*
+	Orange:     		#C63D0F
+    Nice Black Color:	#3B3738 IMPORTANT STUFF
+    Tan:				#FDF3E7
+    Teal:				#7E8F7C
+    https://blog.crazyegg.com/2012/07/11/website-color-palettes/
+    2nd one
+ 
+@font-face{
+	font-family: 'raleway';
+	src: url('fonts/raleway_thin.woff');
+}
+ */
+*{
+	font-family: 'raleway';
+	color:#3B3738;
+}
+
+/*dog catalog page */
+#introJumbo{
+    position: relative;
+    overflow: hidden;
+}
+
+#introJumbo strong{
+    position: relative;
+	opacity: 0.8;
+	color: #C63D0F;
+} 
+#introJumbo img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;  
+}
+#howItWorks{
+	background-color:#FDF3E7;	
+}
+#howItWorks img{
+	background-color: none;
+	background-align:right;
+	height: 380px;
+	width: 285px;
+}
+.navbar-header img {
+    height: 30px;
+    width: auto;
+}
+
+#layout{
+	padding-top:5%;
+	padding-left: 5%;
+	padding-right: 5%;
+	text-align:right;
+}
+#layout img{
+	height:155px;
+	width:250px;
+}
+.row{
+	padding-bottom:1%;
+}
+#layout .col-md-4:nth-child(even){
+	background-color:#eeeeee;
+}
+#sortList{
+	text-align:left !important;
+}

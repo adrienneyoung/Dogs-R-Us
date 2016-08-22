@@ -1,0 +1,10 @@
+psql -h ec2-54-221-249-201.compute-1.amazonaws.com -U vyskmusustwnun -d deje93g884ngbn
+
+PW: 25QVVih68WwMB4PaAYdG09i4Za
+
+
+
+vys.. is username
+deje.. is the database name
+
+Both created by default. Not sure if it can be changed

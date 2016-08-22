@@ -1,0 +1,68 @@
+create database dogsrus;
+
+\c dogsrus;
+
+create table shelterInfo
+(
+shelterId serial primary key,
+shelter_name varchar(25),
+shelter_address varchar(100),
+shelter_description varchar(300)
+);
+
+create table petInfo
+(
+petId serial primary key,
+petType varchar(20) not null,
+pet_name varchar(25),
+dob date,
+breed varchar(20),
+primaryFurColor varchar(10),
+picturePath varchar(100),
+pet_description varchar(500),
+shelterId integer REFERENCES shelterInfo (shelterId)
+);
+
+create table users
+(
+userId serial primary key, 
+user_name varchar(25),
+user_address varchar(100)
+);
+
+create table adoption
+(
+adoptionId serial primary key,
+petId integer REFERENCES petInfo (petId),
+shelterId integer REFERENCES shelterInfo (shelterId), 
+userId integer REFERENCES users (userId),
+delivery_date date,
+delivery_time time
+);
+
+
+insert into shelterInfo(shelter_name, shelter_address, shelter_description) values('Sean Casey Animal Rescue', 'Near Fort Hamilton Brooklyn', 'We rescue, rehabilitate and rehome..Dogs ~ Cats ~ Reptiles ~ Amphibians');
+
+insert into shelterInfo(shelter_name, shelter_address, shelter_description) values('ASPCA', '424 E 92nd St, New York, NY 10128', 'Whether you are looking to adopt or foster an animal, volunteer to help homeless pets in your community, or report animal cruelty your best bet is ASPCA');
+
+
+insert into petInfo(petType, pet_name, dob, breed, primaryFurColor, picturePath, pet_description, shelterId) values('dog', 'chewie', '2013-03-02', 'golden retriever', 'black', '', '', '1');
+
+insert into petInfo(petType, pet_name, dob, breed, primaryFurColor, picturePath, pet_description, shelterId) values('dog', 'santa''s lil helper', '2011-11-02', 'labrador', 'brown', '', '', '1');
+
+insert into petInfo(petType, pet_name, dob, breed, primaryFurColor, picturePath, pet_description, shelterId) values('dog', 'marley', '2015-12-23', 'husky', 'golden', '', '', '1');
+
+insert into petInfo(petType, pet_name, dob, breed, primaryFurColor, picturePath, pet_description, shelterId) values('cat', 'el dorado', '2012-08-22', 'siamese', 'white', '', '', '1');
+
+insert into petInfo(petType, pet_name, dob, breed, primaryFurColor, picturePath, pet_description, shelterId) values('cat', 'unfunny cat', '2012-11-12', 'abyssinian', 'brown', '', '', '2');
+
+insert into petInfo(petType, pet_name, dob, breed, primaryFurColor, picturePath, pet_description, shelterId) values('dog', 'charlie', '2016-01-10', 'bulldog', 'white', '', '', '2');
+
+
+insert into users(user_name, user_address) values('Anubhav', 'Somewhere in Brooklyn');
+
+insert into users(user_name, user_address) values('Chris', 'Near Central Park East 88th');
+
+
+insert into adoption(petId, shelterId, userId, delivery_date, delivery_time) values('3', '2', '2', '2016-04-27', '10:00');
+
